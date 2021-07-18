@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERIFY TOTP</title>
+</head>
+<body>
+    
+    {% if verified %}
+        {% if valid %}
+            <p>Token Is Valid</p>
+        {% else %}
+            <p>Token Is Not Valid</p>
+        {% endif %}
+    {% endif %}
+
+    <form action="" method="post">
+        <input type="text" id="user" name="user" placeholder="USER">
+        <input type="text" id="token" name="token" placeholder="TOKEN">
+        <button type="submit">Verify</button>
+        <a href="/" target="_blank" rel="noopener noreferrer">Register</a>
+    </form>
+
+</body>
+</html>
